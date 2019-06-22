@@ -6,12 +6,12 @@ Simple but flexible script to upload photos to Google Photos. Useful if you have
 ```
 usage: upload.py [-h] [--auth  auth_file] [--album album_name]
                  [--log log_file]
-                 [photo [photo ...]]
+                 [photo path_to_dir]
 
 Upload photos to Google Photos.
 
 positional arguments:
-  photo               filename of a photo to upload
+  photo               Path to dir where are Photos
 
 optional arguments:
   -h, --help          show this help message and exit
