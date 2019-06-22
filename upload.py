@@ -192,6 +192,11 @@ def main():
                     level=logging.INFO)
 
     session = get_authorized_session(args.auth_file)
+    import glob
+
+    path_files = args.photos
+    photos = [f for f in glob.glob(path_files[0] + "**/*.JPG", recursive=True)]
+    upload_photos(session, photos, args.album_name)
 
     upload_photos(session, args.photos, args.album_name)
 
